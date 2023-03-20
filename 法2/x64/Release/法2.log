@@ -1,0 +1,27 @@
+﻿  kMeans.cpp
+C:\Users\ABAO\source\repos\法2\法2\kMeans.cpp(50,1): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\ABAO\source\repos\法2\法2\kMeans.cpp(91,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\ABAO\source\repos\法2\法2\kMeans.cpp(110,19): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\ABAO\source\repos\法2\法2\kMeans.cpp(183,1): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+  main.cpp
+C:\Program Files\PCL 1.12.0\include\pcl-1.12\pcl\visualization\interactor_style.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Program Files\PCL 1.12.0\include\pcl-1.12\pcl\visualization\pcl_visualizer.h(1605,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Program Files\PCL 1.12.0\3rdParty\Boost\include\boost-1_76\boost\detail\iterator.hpp(13): message : This header is deprecated. Use <iterator> instead.
+  thickness_cal.cpp
+C:\Users\ABAO\source\repos\法2\法2\kMeans.cpp(50,1): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\ABAO\source\repos\法2\法2\kMeans.cpp(91,1): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\ABAO\source\repos\法2\法2\kMeans.cpp(110,19): warning C4267: “return”: 从“size_t”转换到“int”，可能丢失数据
+C:\Users\ABAO\source\repos\法2\法2\kMeans.cpp(183,1): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+C:\Program Files\PCL 1.12.0\include\pcl-1.12\pcl\sample_consensus\ransac.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Program Files\PCL 1.12.0\3rdParty\Boost\include\boost-1_76\boost\detail\iterator.hpp(13): message : This header is deprecated. Use <iterator> instead.
+C:\Program Files\PCL 1.12.0\include\pcl-1.12\pcl\visualization\interactor_style.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Program Files\PCL 1.12.0\include\pcl-1.12\pcl\visualization\pcl_visualizer.h(1605,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Users\ABAO\source\repos\法2\法2\thickness_cal.cpp(2757,11): warning C4101: “real_dis”: 未引用的局部变量
+C:\Users\ABAO\source\repos\法2\法2\thickness_cal.cpp(2726): message : 在编译 类 模板 成员函数“void thickness::Thickness<pcl::PointXYZ>::thicknessCal_1(std::vector<thickness::Thickness<pcl::PointXYZ>::ThicknessPair,std::allocator<thickness::Thickness<pcl::PointXYZ>::ThicknessPair>>,std::vector<std::pair<float,int>,std::allocator<std::pair<float,int>>> &,std::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB>>)”时
+C:\Users\ABAO\source\repos\法2\法2\thickness_cal.cpp(3202): message : 查看对正在编译的函数 模板 实例化“void thickness::Thickness<pcl::PointXYZ>::thicknessCal_1(std::vector<thickness::Thickness<pcl::PointXYZ>::ThicknessPair,std::allocator<thickness::Thickness<pcl::PointXYZ>::ThicknessPair>>,std::vector<std::pair<float,int>,std::allocator<std::pair<float,int>>> &,std::shared_ptr<pcl::PointCloud<pcl::PointXYZRGB>>)”的引用
+C:\Users\ABAO\source\repos\法2\法2\thickness_cal.cpp(3228): message : 查看对正在编译的 类 模板 实例化“thickness::Thickness<pcl::PointXYZ>”的引用
+  正在生成代码
+  Previous IPDB not found, fall back to full compilation.
+  All 7955 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  法2.vcxproj -> C:\Users\ABAO\source\repos\法2\x64\Release\法2.exe

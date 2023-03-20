@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="thickness_cal.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="kMeans.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="thickness_cal.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{92f177ad-66be-43a7-9039-63b802ca5fcf}</ProjectGuid>
+    <RootNamespace>法2</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="PCL 1.12.0 Debug.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="PCL 1.12.0 Release.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\ABAO\Desktop\Waste_Steel_Supersize_M2_Source%281116%29\Waste_Steel_Supersize_M2_Source;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <StackReserveSize>1000000000</StackReserveSize>
+      <AdditionalDependencies>pcl_common.lib;pcl_features.lib;pcl_filters.lib;pcl_io.lib;pcl_io_ply.lib;pcl_kdtree.lib;pcl_keypoints.lib;pcl_ml.lib;pcl_octree.lib;pcl_outofcore.lib;pcl_people.lib;pcl_recognition.lib;pcl_registration.lib;pcl_sample_consensus.lib;pcl_search.lib;pcl_segmentation.lib;pcl_stereo.lib;pcl_surface.lib;pcl_tracking.lib;pcl_visualization.lib;vtkChartsCore-9.0.lib;vtkCommonColor-9.0.lib;vtkCommonComputationalGeometry-9.0.lib;vtkCommonCore-9.0.lib;vtkCommonDataModel-9.0.lib;vtkCommonExecutionModel-9.0.lib;vtkCommonMath-9.0.lib;vtkCommonMisc-9.0.lib;vtkCommonSystem-9.0.lib;vtkCommonTransforms-9.0.lib;vtkDICOMParser-9.0.lib;vtkDomainsChemistry-9.0.lib;vtkDomainsChemistryOpenGL2-9.0.lib;vtkdoubleconversion-9.0.lib;vtkexodusII-9.0.lib;vtkexpat-9.0.lib;vtkFiltersAMR-9.0.lib;vtkFiltersCore-9.0.lib;vtkFiltersExtraction-9.0.lib;vtkFiltersFlowPaths-9.0.lib;vtkFiltersGeneral-9.0.lib;vtkFiltersGeneric-9.0.lib;vtkFiltersGeometry-9.0.lib;vtkFiltersHybrid-9.0.lib;vtkFiltersHyperTree-9.0.lib;vtkFiltersImaging-9.0.lib;vtkFiltersModeling-9.0.lib;vtkFiltersParallel-9.0.lib;vtkFiltersParallelImaging-9.0.lib;vtkFiltersPoints-9.0.lib;vtkFiltersProgrammable-9.0.lib;vtkFiltersSelection-9.0.lib;vtkFiltersSMP-9.0.lib;vtkFiltersSources-9.0.lib;vtkFiltersStatistics-9.0.lib;vtkFiltersTexture-9.0.lib;vtkFiltersTopology-9.0.lib;vtkFiltersVerdict-9.0.lib;vtkfreetype-9.0.lib;vtkGeovisCore-9.0.lib;vtkgl2ps-9.0.lib;vtkglew-9.0.lib;vtkhdf5-9.0.lib;vtkhdf5_hl-9.0.lib;vtkImagingColor-9.0.lib;vtkImagingCore-9.0.lib;vtkImagingGeneral-9.0.lib;vtkImagingHybrid-9.0.lib;vtkImagingMath-9.0.lib;vtkImagingMorphological-9.0.lib;vtkImagingSources-9.0.lib;vtkImagingStatistics-9.0.lib;vtkImagingStencil-9.0.lib;vtkInfovisCore-9.0.lib;vtkInfovisLayout-9.0.lib;vtkInteractionImage-9.0.lib;vtkInteractionStyle-9.0.lib;vtkInteractionWidgets-9.0.lib;vtkIOAMR-9.0.lib;vtkIOAsynchronous-9.0.lib;vtkIOCityGML-9.0.lib;vtkIOCore-9.0.lib;vtkIOEnSight-9.0.lib;vtkIOExodus-9.0.lib;vtkIOExport-9.0.lib;vtkIOExportGL2PS-9.0.lib;vtkIOExportPDF-9.0.lib;vtkIOGeometry-9.0.lib;vtkIOImage-9.0.lib;vtkIOImport-9.0.lib;vtkIOInfovis-9.0.lib;vtkIOLegacy-9.0.lib;vtkIOLSDyna-9.0.lib;vtkIOMINC-9.0.lib;vtkIOMotionFX-9.0.lib;vtkIOMovie-9.0.lib;vtkIONetCDF-9.0.lib;vtkIOOggTheora-9.0.lib;vtkIOParallel-9.0.lib;vtkIOParallelXML-9.0.lib;vtkIOPLY-9.0.lib;vtkIOSegY-9.0.lib;vtkIOSQL-9.0.lib;vtkIOTecplotTable-9.0.lib;vtkIOVeraOut-9.0.lib;vtkIOVideo-9.0.lib;vtkIOXML-9.0.lib;vtkIOXMLParser-9.0.lib;vtkjpeg-9.0.lib;vtkjpeg-9.0d.lib;vtkjsoncpp-9.0.lib;vtklibharu-9.0.lib;vtklibproj-9.0.lib;vtklibxml2-9.0.lib;vtkloguru-9.0.lib;vtklz4-9.0.lib;vtklzma-9.0.lib;vtkmetaio-9.0.lib;vtknetcdf-9.0.lib;vtkogg-9.0.lib;vtkParallelCore-9.0.lib;vtkParallelDIY-9.0.lib;vtkpng-9.0.lib;vtkpugixml-9.0.lib;vtkRenderingAnnotation-9.0.lib;vtkRenderingContext2D-9.0.lib;vtkRenderingContextOpenGL2-9.0.lib;vtkRenderingCore-9.0.lib;vtkRenderingFreeType-9.0.lib;vtkRenderingGL2PSOpenGL2-9.0.lib;vtkRenderingImage-9.0.lib;vtkRenderingLabel-9.0.lib;vtkRenderingLOD-9.0.lib;vtkRenderingOpenGL2-9.0.lib;vtkRenderingSceneGraph-9.0.lib;vtkRenderingUI-9.0.lib;vtkRenderingVolume-9.0.lib;vtkRenderingVolumeOpenGL2-9.0.lib;vtkRenderingVtkJS-9.0.lib;vtksqlite-9.0.lib;vtksys-9.0.lib;vtkTestingRendering-9.0.lib;vtktheora-9.0.lib;vtktiff-9.0.lib;vtkverdict-9.0.lib;vtkViewsContext2D-9.0.lib;vtkViewsCore-9.0.lib;vtkViewsInfovis-9.0.lib;vtkWrappingTools-9.0.lib;vtkzlib-9.0.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <Optimization>MaxSpeed</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>pcl_common.lib;pcl_features.lib;pcl_filters.lib;pcl_io.lib;pcl_io_ply.lib;pcl_kdtree.lib;pcl_keypoints.lib;pcl_ml.lib;pcl_octree.lib;pcl_outofcore.lib;pcl_people.lib;pcl_recognition.lib;pcl_registration.lib;pcl_sample_consensus.lib;pcl_search.lib;pcl_segmentation.lib;pcl_stereo.lib;pcl_surface.lib;pcl_tracking.lib;pcl_visualization.lib;vtkChartsCore-9.0.lib;vtkCommonColor-9.0.lib;vtkCommonComputationalGeometry-9.0.lib;vtkCommonCore-9.0.lib;vtkCommonDataModel-9.0.lib;vtkCommonExecutionModel-9.0.lib;vtkCommonMath-9.0.lib;vtkCommonMisc-9.0.lib;vtkCommonSystem-9.0.lib;vtkCommonTransforms-9.0.lib;vtkDICOMParser-9.0.lib;vtkDomainsChemistry-9.0.lib;vtkDomainsChemistryOpenGL2-9.0.lib;vtkdoubleconversion-9.0.lib;vtkexodusII-9.0.lib;vtkexpat-9.0.lib;vtkFiltersAMR-9.0.lib;vtkFiltersCore-9.0.lib;vtkFiltersExtraction-9.0.lib;vtkFiltersFlowPaths-9.0.lib;vtkFiltersGeneral-9.0.lib;vtkFiltersGeneric-9.0.lib;vtkFiltersGeometry-9.0.lib;vtkFiltersHybrid-9.0.lib;vtkFiltersHyperTree-9.0.lib;vtkFiltersImaging-9.0.lib;vtkFiltersModeling-9.0.lib;vtkFiltersParallel-9.0.lib;vtkFiltersParallelImaging-9.0.lib;vtkFiltersPoints-9.0.lib;vtkFiltersProgrammable-9.0.lib;vtkFiltersSelection-9.0.lib;vtkFiltersSMP-9.0.lib;vtkFiltersSources-9.0.lib;vtkFiltersStatistics-9.0.lib;vtkFiltersTexture-9.0.lib;vtkFiltersTopology-9.0.lib;vtkFiltersVerdict-9.0.lib;vtkfreetype-9.0.lib;vtkGeovisCore-9.0.lib;vtkgl2ps-9.0.lib;vtkglew-9.0.lib;vtkhdf5-9.0.lib;vtkhdf5_hl-9.0.lib;vtkImagingColor-9.0.lib;vtkImagingCore-9.0.lib;vtkImagingGeneral-9.0.lib;vtkImagingHybrid-9.0.lib;vtkImagingMath-9.0.lib;vtkImagingMorphological-9.0.lib;vtkImagingSources-9.0.lib;vtkImagingStatistics-9.0.lib;vtkImagingStencil-9.0.lib;vtkInfovisCore-9.0.lib;vtkInfovisLayout-9.0.lib;vtkInteractionImage-9.0.lib;vtkInteractionStyle-9.0.lib;vtkInteractionWidgets-9.0.lib;vtkIOAMR-9.0.lib;vtkIOAsynchronous-9.0.lib;vtkIOCityGML-9.0.lib;vtkIOCore-9.0.lib;vtkIOEnSight-9.0.lib;vtkIOExodus-9.0.lib;vtkIOExport-9.0.lib;vtkIOExportGL2PS-9.0.lib;vtkIOExportPDF-9.0.lib;vtkIOGeometry-9.0.lib;vtkIOImage-9.0.lib;vtkIOImport-9.0.lib;vtkIOInfovis-9.0.lib;vtkIOLegacy-9.0.lib;vtkIOLSDyna-9.0.lib;vtkIOMINC-9.0.lib;vtkIOMotionFX-9.0.lib;vtkIOMovie-9.0.lib;vtkIONetCDF-9.0.lib;vtkIOOggTheora-9.0.lib;vtkIOParallel-9.0.lib;vtkIOParallelXML-9.0.lib;vtkIOPLY-9.0.lib;vtkIOSegY-9.0.lib;vtkIOSQL-9.0.lib;vtkIOTecplotTable-9.0.lib;vtkIOVeraOut-9.0.lib;vtkIOVideo-9.0.lib;vtkIOXML-9.0.lib;vtkIOXMLParser-9.0.lib;vtkjpeg-9.0.lib;vtkjpeg-9.0d.lib;vtkjsoncpp-9.0.lib;vtklibharu-9.0.lib;vtklibproj-9.0.lib;vtklibxml2-9.0.lib;vtkloguru-9.0.lib;vtklz4-9.0.lib;vtklzma-9.0.lib;vtkmetaio-9.0.lib;vtknetcdf-9.0.lib;vtkogg-9.0.lib;vtkParallelCore-9.0.lib;vtkParallelDIY-9.0.lib;vtkpng-9.0.lib;vtkpugixml-9.0.lib;vtkRenderingAnnotation-9.0.lib;vtkRenderingContext2D-9.0.lib;vtkRenderingContextOpenGL2-9.0.lib;vtkRenderingCore-9.0.lib;vtkRenderingFreeType-9.0.lib;vtkRenderingGL2PSOpenGL2-9.0.lib;vtkRenderingImage-9.0.lib;vtkRenderingLabel-9.0.lib;vtkRenderingLOD-9.0.lib;vtkRenderingOpenGL2-9.0.lib;vtkRenderingSceneGraph-9.0.lib;vtkRenderingUI-9.0.lib;vtkRenderingVolume-9.0.lib;vtkRenderingVolumeOpenGL2-9.0.lib;vtkRenderingVtkJS-9.0.lib;vtksqlite-9.0.lib;vtksys-9.0.lib;vtkTestingRendering-9.0.lib;vtktheora-9.0.lib;vtktiff-9.0.lib;vtkverdict-9.0.lib;vtkViewsContext2D-9.0.lib;vtkViewsCore-9.0.lib;vtkViewsInfovis-9.0.lib;vtkWrappingTools-9.0.lib;vtkzlib-9.0.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
